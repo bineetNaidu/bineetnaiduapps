@@ -1,6 +1,6 @@
 <template>
 <div class="welcome__board">
-  <img alt="Vue logo" src="./assets/logo.png">
+  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <h1>Hello 👋👋</h1>
 </div>
 </template>
@@ -15,7 +15,18 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100vh;
+  width: 100vw;
+}
+
 .welcome__board {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
