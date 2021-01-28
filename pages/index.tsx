@@ -1,6 +1,12 @@
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import axios from '../utils/axios';
 import Footer from '../components/Footer';
+import ProjectList from '../components/ProjectList';
+import { ProjectType } from '../utils/types';
 
-export default function Home() {
+export default function Home({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="bg-purple-400">
       <div className="flex justify-center text-4xl py-4 app">
@@ -17,7 +23,28 @@ export default function Home() {
         </h1>
       </div>
 
+      <ProjectList projects={projects} />
+
       <Footer />
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { data } = await axios.get('/');
+  // if (data.success && !data.errors) {
+  //   return {
+  //     props: { projects: [] },
+  //   };
+  // }
+  console.log(data);
+
+  const projects: ProjectType[] = data.data;
+
+  return {
+    props: {
+      projects,
+    },
+    revalidate: 60, // ? In Seconds
+  };
+};
