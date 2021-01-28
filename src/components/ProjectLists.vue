@@ -1,11 +1,29 @@
 <template>
   <div>
     <h1>Projects</h1>
-    <ul :if="projects">
-      <li v-for="project in projects" :key="project._id">
-        {{project.name}}
-      </li>
-    </ul>
+    <section :if="projects" class="project__lists">
+
+      <div v-for="project in projects" :key="project._id" class="project">
+        <h1>
+          {{project.name}}
+          </h1>
+          <ul>
+            <li>
+              Github: <a href="{{project.github}}">{{project.github}}</a>
+            </li>
+            <li>
+              Web: <a href="{{project.url}}">{{project.url}}</a>
+            </li>
+            <li>
+              Description: {{project.description}}
+            </li>
+            <li>
+              Status: {{project.status}}
+            </li>
+          </ul>
+      </div>
+
+    </section>
   </div>
 </template>
 
