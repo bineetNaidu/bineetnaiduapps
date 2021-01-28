@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { ProjectType } from '../utils/types';
 import List from './List';
 import Project from './Project';
@@ -18,4 +18,4 @@ const ProjectList: FC<Props> = ({ projects }) => {
   );
 };
 
-export default ProjectList;
+export default memo(ProjectList);

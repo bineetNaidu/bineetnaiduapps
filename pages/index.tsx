@@ -8,7 +8,7 @@ export default function Home({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="bg-purple-400 app">
+    <div className="bg-purple-400 app font-mono">
       <div className="flex justify-center text-4xl py-4 ">
         <h1>
           Hello 👋👋, I'm

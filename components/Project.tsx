@@ -1,13 +1,22 @@
-import { FC } from 'react';
+import { FC, useCallback, memo } from 'react';
 import { ProjectType } from '../utils/types';
+import { useRouter } from 'next/router';
 
 interface Props {
   project: ProjectType;
 }
 
 const Project: FC<Props> = ({ project }) => {
+  const router = useRouter();
+  const handleClick = useCallback(() => {
+    router.push(`/project/${project._id}`);
+  }, [project._id]);
+
   return (
-    <article className="p-4 flex space-x-4 w-8/12 mx-auto">
+    <article
+      className="p-4 flex space-x-4 w-8/12 mx-auto cursor-pointer hover:bg-purple-500"
+      onClick={handleClick}
+    >
       {/* <img
         src={project.image}
         alt=""
@@ -17,7 +26,7 @@ const Project: FC<Props> = ({ project }) => {
       /> */}
       <div className="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
         <h2 className="text-lg font-semibold text-black mb-0.5">
-          {project.name}
+          <span className="link">{project.name}</span>
         </h2>
         <dl className="flex flex-wrap text-sm font-medium whitespace-pre">
           <div>
@@ -53,4 +62,4 @@ const Project: FC<Props> = ({ project }) => {
   );
 };
 
-export default Project;
+export default memo(Project);

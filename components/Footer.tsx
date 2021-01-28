@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
 const Footer: FC = () => {
   return (
@@ -8,4 +8,4 @@ const Footer: FC = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);
