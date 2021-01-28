@@ -12,5 +12,5 @@ export type ProjectType = {
 export enum Status {
   Ongoing = 'ongoing',
   Planing = 'planing',
-  Completed = 'completed'
+  Completed = 'completed',
 }
