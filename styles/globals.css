@@ -5,7 +5,8 @@
 }
 
 .app {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -17,14 +18,6 @@
   );
   color: currentColor;
   text-decoration: none;
-  animation: all 0.5 ease-out alternate;
-}
-.link:hover {
-  background-image: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(56, 124, 56, 0.467) 0
-  );
 }
 
 /* Tailwind magics */

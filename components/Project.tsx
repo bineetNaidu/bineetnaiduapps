@@ -7,7 +7,7 @@ interface Props {
 
 const Project: FC<Props> = ({ project }) => {
   return (
-    <article className="p-4 flex space-x-4 w-full">
+    <article className="p-4 flex space-x-4 w-8/12 mx-auto">
       {/* <img
         src={project.image}
         alt=""
@@ -27,8 +27,9 @@ const Project: FC<Props> = ({ project }) => {
             </dd>
           </div>
           <div className="flex-none w-full mt-0.5 font-normal">
-            <dt className="inline">Description</dt>{' '}
-            <dd className="inline text-black">{project.description}</dd>
+            <dd className="inline text-black  italic whitespace-pre-wrap">
+              {project.description}
+            </dd>
           </div>
           <div className="absolute top-0 right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 hidden sm:flex lg:hidden xl:flex items-center space-x-1">
             {project.featured && (

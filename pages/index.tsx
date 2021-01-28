@@ -8,7 +8,7 @@ export default function Home({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="bg-purple-400 app min-h-full">
+    <div className="bg-purple-400 app">
       <div className="flex justify-center text-4xl py-4 ">
         <h1>
           Hello 👋👋, I'm
@@ -32,12 +32,11 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { data } = await axios.get('/');
-  // if (data.success && !data.errors) {
-  //   return {
-  //     props: { projects: [] },
-  //   };
-  // }
-  console.log(data);
+  if (!data.success && !data.errors) {
+    return {
+      props: { projects: [] },
+    };
+  }
 
   const projects: ProjectType[] = data.data;
 
