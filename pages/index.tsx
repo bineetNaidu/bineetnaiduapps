@@ -8,8 +8,8 @@ export default function Home({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="bg-purple-400">
-      <div className="flex justify-center text-4xl py-4 app">
+    <div className="bg-purple-400 app min-h-full">
+      <div className="flex justify-center text-4xl py-4 ">
         <h1>
           Hello 👋👋, I'm
           <a
@@ -45,6 +45,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       projects,
     },
-    revalidate: 60, // ? In Seconds
+    revalidate: 1, // ? In Seconds
   };
 };
