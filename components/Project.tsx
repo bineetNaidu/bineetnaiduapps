@@ -41,10 +41,22 @@ const Project: FC<Props> = ({ project }) => {
               </dt>
             )}
             <dd>
-              <a href={project.github}>Github</a>
+              <a target="_blank" rel="noopener" href={project.github}>
+                <img
+                  src="/github.png"
+                  className="h-8 cursor-pointer"
+                  alt="Github Logo"
+                />
+              </a>
             </dd>
             <dd>
-              <a href={project.url}>Web</a>
+              <a target="_blank" rel="noopener" href={project.url}>
+                <img
+                  src="/browser.png"
+                  className="h-8 cursor-pointer"
+                  alt="Web browser Logo"
+                />
+              </a>
             </dd>
           </div>
         </dl>
