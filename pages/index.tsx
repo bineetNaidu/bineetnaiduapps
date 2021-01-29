@@ -7,7 +7,7 @@ export default function Home({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="bg-gray-900 text-white app font-mono">
+    <div className="bg-gray-900 text-white font-mono">
       <ProjectList projects={projects} />
     </div>
   );
