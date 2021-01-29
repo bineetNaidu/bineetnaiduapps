@@ -1,6 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import axios from '../utils/axios';
-import Footer from '../components/Footer';
 import ProjectList from '../components/ProjectList';
 import { ProjectType } from '../utils/types';
 
@@ -10,7 +9,6 @@ export default function Home({
   return (
     <div className="bg-gray-900 text-white app font-mono">
       <ProjectList projects={projects} />
-      <Footer />
     </div>
   );
 }

@@ -29,7 +29,6 @@ class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>My Projects | bineetnaidu.io</title>
         </Head>
         <body className="bg-gray-900">
           <Main />
