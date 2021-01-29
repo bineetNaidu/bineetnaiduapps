@@ -8,23 +8,8 @@ export default function Home({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="bg-purple-400 app font-mono">
-      <div className="flex justify-center text-4xl py-4 ">
-        <h1>
-          Hello 👋👋, I'm
-          <a
-            className="link ml-2"
-            href="https://bineetnaidu-io.web.app"
-            target="_black"
-            rel="noopener"
-          >
-            Bineet
-          </a>
-        </h1>
-      </div>
-
+    <div className="bg-gray-900 text-white app font-mono">
       <ProjectList projects={projects} />
-
       <Footer />
     </div>
   );

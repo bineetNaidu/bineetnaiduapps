@@ -1,22 +1,13 @@
 import { FC, useCallback, memo } from 'react';
 import { ProjectType } from '../utils/types';
-import { useRouter } from 'next/router';
 
 interface Props {
   project: ProjectType;
 }
 
 const Project: FC<Props> = ({ project }) => {
-  const router = useRouter();
-  const handleClick = useCallback(() => {
-    router.push(`/project/${project._id}`);
-  }, [project._id]);
-
   return (
-    <article
-      className="p-4 flex space-x-4 w-8/12 mx-auto cursor-pointer hover:bg-purple-500"
-      onClick={handleClick}
-    >
+    <article className="p-4 flex space-x-4 w-8/12 mx-auto cursor-pointer hover:bg-purple-900 transition-all rounded">
       {/* <img
         src={project.image}
         alt=""
@@ -25,8 +16,8 @@ const Project: FC<Props> = ({ project }) => {
         height="144"
       /> */}
       <div className="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
-        <h2 className="text-lg font-semibold text-black mb-0.5">
-          <span className="link">{project.name}</span>
+        <h2 className="text-lg font-semibold mb-0.5 text-purple-300">
+          <span className="text-3xl">{project.name}</span>
         </h2>
         <dl className="flex flex-wrap text-sm font-medium whitespace-pre">
           <div>
@@ -36,7 +27,7 @@ const Project: FC<Props> = ({ project }) => {
             </dd>
           </div>
           <div className="flex-none w-full mt-0.5 font-normal">
-            <dd className="inline text-black  italic whitespace-pre-wrap">
+            <dd className="inline italic whitespace-pre-wrap text-green-200">
               {project.description}
             </dd>
           </div>
