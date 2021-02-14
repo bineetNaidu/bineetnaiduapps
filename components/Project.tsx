@@ -7,14 +7,7 @@ interface Props {
 
 const Project: FC<Props> = ({ project }) => {
   return (
-    <article className="p-4 flex space-x-4 w-8/12 mx-auto cursor-pointer hover:bg-purple-900 transition-all rounded">
-      {/* <img
-        src={project.image}
-        alt=""
-        className="flex-none w-18 h-18 rounded-lg object-cover bg-gray-100"
-        width="144"
-        height="144"
-      /> */}
+    <article className="p-4 flex space-x-4 w-11/12 md:w-8/12 mx-auto cursor-pointer hover:bg-purple-900 transition-all rounded">
       <div className="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
         <h2 className="text-lg font-semibold mb-0.5 text-purple-300">
           <span className="text-3xl">{project.name}</span>
@@ -31,7 +24,7 @@ const Project: FC<Props> = ({ project }) => {
               {project.description}
             </dd>
           </div>
-          <div className="absolute top-0 right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 hidden sm:flex lg:hidden xl:flex items-center space-x-1">
+          <div className="absolute top-0 right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 flex items-center space-x-1">
             {project.featured && (
               <dt className="text-amber-500">
                 <span className="sr-only">Featured</span>
