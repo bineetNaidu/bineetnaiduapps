@@ -9,11 +9,11 @@ const Project: FC<Props> = ({ project }) => {
   return (
     <article className="p-4 flex space-x-4 w-11/12 md:w-8/12 mx-auto cursor-pointer hover:bg-purple-900 transition-all rounded">
       <div className="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
-        <h2 className="text-lg font-semibold mb-0.5 text-purple-300">
-          <span className="text-3xl">{project.name}</span>
+        <h2 className="sm:text-3xl text-lg font-semibold mb-0.5 text-purple-300">
+          <span>{project.name}</span>
         </h2>
         <dl className="flex flex-wrap text-sm font-medium whitespace-pre">
-          <div>
+          <div className="text-xs sm:text-sm text-gray-500">
             <dt className="sr-only">Status</dt>
             <dd>
               <abbr title={`Status: ${project.status}`}>{project.status}</abbr>
@@ -24,7 +24,7 @@ const Project: FC<Props> = ({ project }) => {
               {project.description}
             </dd>
           </div>
-          <div className="absolute top-0 right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 flex items-center space-x-1">
+          <div className="sm:absolute sm:top-0 sm:right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 flex items-center space-x-1">
             {project.featured && (
               <dt className="text-amber-500">
                 <span className="sr-only">Featured</span>

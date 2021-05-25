@@ -4,7 +4,7 @@ import Tabs from './Tabs';
 const Header: FC = () => {
   return (
     <>
-      <div className="flex justify-center text-4xl py-4 text-purple-200">
+      <div className="flex justify-center text-center text-3xl py-4 text-purple-200">
         <h1>
           Hello 👋👋, I'm
           <a
