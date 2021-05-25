@@ -9,7 +9,7 @@ const Header: FC = () => {
           Hello 👋👋, I'm
           <a
             className="link ml-2"
-            href="https://bineetnaidu-io.web.app"
+            href="https://bineetnaidu.github.io"
             target="_black"
             rel="noopener"
           >

@@ -33,24 +33,28 @@ const Project: FC<Props> = ({ project }) => {
                 </svg>
               </dt>
             )}
-            <dd>
-              <a target="_blank" rel="noopener" href={project.github}>
-                <img
-                  src="/github.png"
-                  className="h-8 cursor-pointer"
-                  alt="Github Logo"
-                />
-              </a>
-            </dd>
-            <dd>
-              <a target="_blank" rel="noopener" href={project.url}>
-                <img
-                  src="/browser.png"
-                  className="h-8 cursor-pointer"
-                  alt="Web browser Logo"
-                />
-              </a>
-            </dd>
+            {project.github && (
+              <dd>
+                <a target="_blank" rel="noopener" href={project.github}>
+                  <img
+                    src="/github.png"
+                    className="h-8 cursor-pointer"
+                    alt="Github Logo"
+                  />
+                </a>
+              </dd>
+            )}
+            {project.url && (
+              <dd>
+                <a target="_blank" rel="noopener" href={project.url}>
+                  <img
+                    src="/browser.png"
+                    className="h-8 cursor-pointer"
+                    alt="Web browser Logo"
+                  />
+                </a>
+              </dd>
+            )}
           </div>
         </dl>
       </div>

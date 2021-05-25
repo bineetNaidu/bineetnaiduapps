@@ -27,7 +27,7 @@ const About: FC = () => {
           my Website:
           <a
             className="link ml-2 text-green-300"
-            href="https://bineetnaidu-io.web.app"
+            href="https://bineetnaidu.github.io"
           >
             bineetnaidu.io
           </a>
